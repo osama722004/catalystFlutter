@@ -158,10 +158,6 @@ class _ProfileViewState extends State<ProfileView>
                                   fontWeight: FontWeight.bold),
                             ),
                             Spacer(),
-                            IconButton(
-                              icon: Icon(Icons.more_horiz),
-                              onPressed: () {},
-                            ),
                           ],
                         ),
                       ),
