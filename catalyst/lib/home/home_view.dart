@@ -9,7 +9,9 @@ class HomePage extends StatefulWidget {
   final User user;
 
   HomePage({Key? key, required this.user}) : super(key: key);
-
+initState(){
+  print(user);
+}
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -84,7 +86,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ] else if (pageNum == 1) ...[
               // Content for Profile tab
+
               ProfileView(user: widget.user),
+
             ],
           ],
         ),
@@ -103,6 +107,7 @@ class _HomePageState extends State<HomePage> {
           selectedItemColor: Colors.blue[800],
           onTap: (index) {
             setState(() {
+              print(widget.user);
               pageNum = index;
             });
           },

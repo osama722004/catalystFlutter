@@ -134,6 +134,13 @@ class _AddProjectState extends State<AddProject> {
                     // Add your logic to save the project
                   },
                   child: Text('Save Project'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromRGBO(77, 134, 156, 1),
+                    minimumSize: Size(300, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                  ),
                 ),
               ],
             ),

@@ -2,7 +2,6 @@ import 'package:catalyst/home/home_view.dart';
 import 'package:catalyst/login/login_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../signUp/sign_up.dart';
 
@@ -32,9 +31,10 @@ class _LoginViewState extends State<LoginView> {
               children: [
                 SizedBox(height: 63),
                 Text(
+
                   "Hi, Welcome Back!",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
+                  style: TextStyle(
                     color: Color.fromRGBO(255, 255, 255, 1),
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -125,6 +125,8 @@ class _LoginViewState extends State<LoginView> {
                                 if (_formKey.currentState!.validate()) {
                                   print("it cliked");
                                   loginUser(context, _email, _password);
+                                  print(_email);
+                                  print(_password);
                                 }
                               },
                               child: Text('Login',
@@ -145,7 +147,7 @@ class _LoginViewState extends State<LoginView> {
                                 children: [
                                   TextSpan(
                                     text: 'Don\'t have an account! ',
-                                    style: GoogleFonts.poppins(
+                                    style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -188,13 +190,13 @@ class _LoginViewState extends State<LoginView> {
                               ),
                             ),
                           ],
-                        ),
-                      ),
-                    ],
+
                   ),
                 ),
-              ],
-            ),
+
+  ]),
+    )
+            ]),
           ),
         ],
       ),
